@@ -1,0 +1,1 @@
+# Babel is used to convert JSX to browser understandable JS code here.
