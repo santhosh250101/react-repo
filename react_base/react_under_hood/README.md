@@ -85,3 +85,27 @@ React updates the UI in two key phases: **Rendering Phase** and **Commit Phase**
    |
    v
 [Updated UI Displayed]
+
+
+
+-----------
+useEffect and useLayoutEffect
+1. React Render Phase: (build virtual DOM)
+2. React Commit Phase:
+   ✅ DOM updates applied
+   ✅ useLayoutEffect runs
+3. Browser Paint Phase:
+   🎨 Screen is rendered
+4. 🔁 useEffect runs after paint
+
+# Analogy
+- Commit Phase is like a chef plating the dish on the kitchen counter.
+-Paint Phase is like the waiter serving the dish to the customer.
+- useLayoutEffect is the chef making final tweaks before the dish is seen.
+- useEffect is the manager reviewing feedback after the dish is served.
+
+Both hooks are skipped during rendering.
+
+useLayoutEffect is like: "I want to run before the user sees anything."
+
+useEffect is like: "I'll wait until after the user sees the UI."
